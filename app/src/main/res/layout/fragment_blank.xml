@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="25dp"
+    android:layout_height="match_parent"
+    tools:context=".BlankFragment">
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:id="@+id/view_pager"
+        android:layout_height="match_parent"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tab"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:translationY="@dimen/_25sdp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="@dimen/_25sdp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:src="@drawable/image"
+        android:id="@+id/image"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/image"
+                    app:layout_constraintBottom_toTopOf="@id/number_back"
+                    app:cardElevation="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    app:cardCornerRadius="@dimen/_25sdp"
+                    android:id="@+id/name_back"
+                    tools:ignore="MissingConstraints">
+
+                    <EditText
+                        android:id="@+id/ism"
+                        android:layout_width="@dimen/_200sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:hint="   Name"
+                        android:textColor="@color/black"
+                        android:minHeight="48dp"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="italic" />
+                </androidx.cardview.widget.CardView>
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardElevation="@dimen/_5sdp"
+                    android:id="@+id/number_back"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    app:layout_constraintTop_toBottomOf="@id/name_back"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_1"
+                    app:cardCornerRadius="@dimen/_25sdp"
+                    tools:ignore="MissingConstraints">
+
+                    <EditText
+                        android:id="@+id/raqam"
+                        android:layout_width="@dimen/_200sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:hint="   Number"
+                        android:inputType="phone"
+                        android:textColor="@color/black"
+                        android:minHeight="48dp"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="italic" />
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    app:cardBackgroundColor="#2DB198"
+                    app:layout_constraintTop_toBottomOf="@+id/number_back"
+                    app:cardElevation="@dimen/_5sdp"
+                    app:layout_constraintBottom_toTopOf="@+id/tab"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:id="@+id/btn_1"
+                    app:cardCornerRadius="@dimen/_25sdp"
+                    tools:ignore="MissingConstraints">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_20ssp"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:text="SAVE"
+                        android:textColor="@color/white" />
+                </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
